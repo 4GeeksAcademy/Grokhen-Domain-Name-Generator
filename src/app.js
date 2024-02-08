@@ -11,9 +11,10 @@ window.onload = function() {
   let noun = [];
   let domainType = [];
   let domainsList = document.getElementById("domains");
+
   for (let i = 0; i < 3; i++) {
     let usersPronouns = prompt(`Escribe un pronombre ${i + 1}/3:`);
-    if (usersPronouns === null || usersPronouns === "") {
+    if (usersPronouns === null || usersPronouns.trim() === "") {
       alert("Debe ingresar un valor.");
       i--;
     } else {
@@ -21,17 +22,8 @@ window.onload = function() {
     }
   }
   for (let i = 0; i < 3; i++) {
-    let usersAdj = prompt(`Escribe un adjetivo ${i + 1}/3:`);
-    if (usersAdj === null || usersAdj === "") {
-      alert("Debe ingresar un valor.");
-      i--;
-    } else {
-      adj.push(usersAdj);
-    }
-  }
-  for (let i = 0; i < 3; i++) {
     let usersNoun = prompt(`Escribe un nombre ${i + 1}/3:`);
-    if (usersNoun === null || usersNoun === "") {
+    if (usersNoun === null || usersNoun.trim() === "") {
       alert("Debe ingresar un valor.");
       i--;
     } else {
@@ -39,8 +31,17 @@ window.onload = function() {
     }
   }
   for (let i = 0; i < 3; i++) {
+    let usersAdj = prompt(`Escribe un adjetivo ${i + 1}/3:`);
+    if (usersAdj === null || usersAdj.trim() === "") {
+      alert("Debe ingresar un valor.");
+      i--;
+    } else {
+      adj.push(usersAdj);
+    }
+  }
+  for (let i = 0; i < 3; i++) {
     let usersDomainType = prompt(`Escribe un tipo de dominio ${i + 1}/3:`);
-    if (usersDomainType === null || usersDomainType === "") {
+    if (usersDomainType === null || usersDomainType.trim() === "") {
       alert("Debe ingresar un valor.");
       i--;
     } else {
